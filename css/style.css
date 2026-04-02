@@ -306,6 +306,10 @@ address { font-style: normal; }
     margin-bottom: 40px;
 }
 
+.como-funciona .compramos__grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 .compramos__card {
     background: var(--black-card);
     border: 1px solid var(--gray-border);
@@ -718,6 +722,14 @@ address { font-style: normal; }
     .whatsapp-float i { font-size: 1.7rem; }
 }
 
+@media (max-width: 1024px) {
+    .como-funciona .compramos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .como-funciona .compramos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 420px) {
     .header__logo-text { font-size: 0.9rem; }
     .header__logo-img { height: 32px; }
@@ -728,6 +740,7 @@ address { font-style: normal; }
     .hero__subtitle { font-size: 0.95rem; }
 
     .compramos__grid { grid-template-columns: 1fr; }
+    .como-funciona .compramos__grid { grid-template-columns: 1fr; }
     .compramos__card { padding: 24px 20px; }
 
     .passo__img-wrapper { height: 140px; }
