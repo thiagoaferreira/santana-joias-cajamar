@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* =============================================
+   DRA. CAMILA CONCEIÇÃO - Link Page
+   ============================================= */
+
+.app-wrapper {
+  min-height: 100svh;
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 430px;
+  min-height: 100svh;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 48px;
+}
+
+/* =============================================
+   HERO — imagem de fundo + cards sobrepostos
+   ============================================= */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+}
+
+.hero-bg {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Gradiente forte na base: funde a imagem com o preto */
+.hero-fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  background: linear-gradient(to top,
+    #000 0%,
+    #000 15%,
+    rgba(0,0,0,0.85) 40%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* =============================================
+   GRID DE CARDS — sobreposto no hero
+   ============================================= */
+
+.links-grid {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  padding: 0 14px 16px 14px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  z-index: 2;
+}
+
+.link-card {
+  position: relative;
+  background: #111;
+  border-radius: 12px;
+  border: none;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 8px 6px 10px 6px;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: visible;
+  transition: transform 0.2s ease;
+}
+
+
+.link-card:hover {
+  transform: translateY(-2px);
+}
+
+.link-card--featured {
+  border: none;
+}
+
+.link-card-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.link-card-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  z-index: 3;
+  line-height: 0;
+}
+
+.link-card-badge-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.link-card-label {
+  position: relative;
+  z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.35;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+}
+
+/* =============================================
+   FOOTER LOGO
+   ============================================= */
+
+.footer-logo {
+  margin-top: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-img {
+  width: 120px;
+  object-fit: contain;
+}
