@@ -664,16 +664,16 @@ address { font-style: normal; }
 .footer__brand {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-}
-
-.footer__brand > div {
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
 }
 
-.footer__logo { height: 50px; width: auto; }
+.footer__logo {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 8px;
+}
 
 .footer__title {
     font-family: var(--font-heading);
