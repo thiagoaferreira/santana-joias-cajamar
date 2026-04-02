@@ -378,6 +378,10 @@ address { font-style: normal; }
     border-radius: var(--radius);
 }
 
+.contato__text .btn {
+    width: fit-content;
+}
+
 .compramos__card {
     background: var(--black-card);
     border: 1px solid var(--gray-border);
