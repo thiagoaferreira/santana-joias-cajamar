@@ -753,6 +753,15 @@ address { font-style: normal; }
     transform: scale(1.1);
 }
 
+.footer__bottom {
+    text-align: center;
+    padding-top: 24px;
+    border-top: 1px solid var(--gray-border);
+    margin-top: 24px;
+    color: var(--gray-light);
+    font-size: 0.85rem;
+}
+
 .footer__copy {
     color: var(--gray);
     font-size: 0.8rem;
