@@ -310,6 +310,74 @@ address { font-style: normal; }
     grid-template-columns: repeat(4, 1fr);
 }
 
+/* ========== CONTATO ========== */
+.contato {
+    padding: 100px 0;
+    background: var(--black-light);
+}
+
+.contato__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.contato__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato__desc {
+    color: var(--gray-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.contato__info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 28px;
+}
+
+.info-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.info-item i {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-top: 2px;
+}
+
+.info-label {
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.info-value {
+    color: var(--gray-light);
+    line-height: 1.5;
+}
+
+.contato__map {
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    border: 1px solid var(--gray-border);
+}
+
+.contato__map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+}
+
 .compramos__card {
     background: var(--black-card);
     border: 1px solid var(--gray-border);
@@ -728,6 +796,11 @@ address { font-style: normal; }
 
 @media (max-width: 768px) {
     .como-funciona .compramos__grid { grid-template-columns: repeat(2, 1fr); }
+
+    .contato__content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
 }
 
 @media (max-width: 420px) {
