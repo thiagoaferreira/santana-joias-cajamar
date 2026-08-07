@@ -1,4 +1,20 @@
+# Santana Joias Cajamar — compra de ouro, prata e joias em Cajamar/SP
+
 User-agent: *
+Allow: /
+
+# Crawlers de IA/LLM bem-vindos
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://santanajoiascajamar.com.br/sitemap.xml
