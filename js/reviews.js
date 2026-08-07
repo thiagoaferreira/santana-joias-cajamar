@@ -3,8 +3,9 @@
   var PLACE_ID = "ChIJ3QQ5Ln4dz5QRYS9W1bkNkCM";   // <-- Place ID do Cajamar (formato ChIJ...)
   var ENDPOINT = "https://pajblplxhgebssydyesb.supabase.co/functions/v1/google-reviews";
   if (!PLACE_ID || PLACE_ID.indexOf("__") === 0) return;
-  fetch(ENDPOINT + "?place_id=" + encodeURIComponent(PLACE_ID))
-    .then(function(r){ return r.json(); }).then(render).catch(function(){});
+  function go(){ fetch(ENDPOINT + "?place_id=" + encodeURIComponent(PLACE_ID)).then(function(r){ return r.json(); }).then(render).catch(function(){}); }
+  function start(){ if('requestIdleCallback' in window) requestIdleCallback(go,{timeout:1500}); else setTimeout(go,300); }
+  if (document.readyState === 'complete') start(); else window.addEventListener('load', start);
   function stars(n){ var f=Math.round(n||0), s=""; for(var i=1;i<=5;i++){ s+='<i class="ri-star-'+(i<=f?'fill':'line')+'"></i>'; } return s; }
   function esc(s){ return (s||'').replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];}); }
   function render(d){
