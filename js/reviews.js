@@ -21,6 +21,8 @@
         '<div><div class="review__author">'+esc(rv.author)+'</div><div class="review__stars">'+stars(rv.rating)+'</div></div></div>'+
         '<p class="review__text">'+esc(rv.text)+'</p><span class="review__when">'+esc(rv.when)+'</span></article>';
     }).join('');
+    var hero=document.getElementById('heroRating');
+    if(hero){ hero.innerHTML='<i class="ri-google-fill"></i><strong>'+d.rating.toFixed(1).replace('.',',')+'</strong><span class="hero__rating-stars">'+stars(d.rating)+'</span><span class="hero__rating-label">no Google \u00b7 '+d.total+' avalia\u00e7\u00f5es</span>'; if(d.url) hero.href=d.url; hero.hidden=false; }
     var link=document.getElementById('reviewsLink');
     if(link){ if(d.url) link.href=d.url; else link.style.display='none'; }
     sec.hidden=false;
