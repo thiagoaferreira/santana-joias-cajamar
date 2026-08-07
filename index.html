@@ -1260,7 +1260,7 @@ address { font-style: normal; }
 
     .cta-final__title { font-size: 1.5rem; }
 }
-</style>
+.map-facade{position:relative;width:100%;height:400px;border-radius:14px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;padding:20px;background:radial-gradient(120% 120% at 50% 0%,#2a2410,#141414);border:1px solid rgba(212,160,23,.35);transition:border-color .2s}.map-facade:hover{border-color:#D4A017}.map-facade__pin{width:64px;height:64px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(180deg,#FFD700,#D4A017);color:#141414;font-size:32px;box-shadow:0 8px 24px rgba(212,160,23,.4)}.map-facade__txt{font-family:'Montserrat',sans-serif;font-weight:800;color:#FFD700;font-size:18px;text-transform:uppercase;letter-spacing:.02em}.map-facade__sub{color:#bbb;font-size:14px}.map-facade iframe{position:absolute;inset:0;width:100%;height:100%;border:0}</style>
 <link rel="preload" as="image" href="img/hero-bg-mobile.jpg" media="(max-width:768px)"><link rel="preload" as="image" href="img/hero-bg-desktop.jpg" media="(min-width:769px)">
 </head>
 <body>
@@ -1423,7 +1423,7 @@ address { font-style: normal; }
                     </a>
                 </div>
                 <div class="contato__map reveal">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.6890127963435!2d-46.88046!3d-23.184722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf4e8e5e9e5e5d%3A0x5e5e5e5e5e5e5e5e!2sAv.%20Ten.%20Marques%2C%201731%20-%20Polvilho%2C%20Cajamar%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="map-facade" role="button" tabindex="0" aria-label="Carregar mapa da localização em Cajamar" data-mapsrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.6890127963435!2d-46.88046!3d-23.184722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf4e8e5e9e5e5d%3A0x5e5e5e5e5e5e5e5e!2sAv.%20Ten.%20Marques%2C%201731%20-%20Polvilho%2C%20Cajamar%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890" onclick="sjLoadMap(this)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();sjLoadMap(this)}"><span class="map-facade__pin"><i class="ri-map-pin-line"></i></span><span class="map-facade__txt">Ver localização no mapa</span><span class="map-facade__sub">Av. Tenente Marques, 1731 · Polvilho, Cajamar - SP</span></div>
                 </div>
             </div>
         </div>
@@ -1463,5 +1463,6 @@ address { font-style: normal; }
     </footer>
 
     <script src="js/main.js"></script>
+<script>function sjLoadMap(el){var s=el.getAttribute("data-mapsrc");if(!s||el.querySelector("iframe"))return;var f=document.createElement("iframe");f.src=s;f.setAttribute("allowfullscreen","");f.setAttribute("loading","lazy");f.setAttribute("referrerpolicy","no-referrer-when-downgrade");f.title="Mapa Santana Joias Cajamar";el.innerHTML="";el.appendChild(f);el.style.cursor="default"}</script>
 </body>
 </html>
